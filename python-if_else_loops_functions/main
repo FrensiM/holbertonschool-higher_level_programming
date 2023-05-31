@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
-add = __import__('10-add').add
+fizzbuzz = __import__('12-fizzbuzz').fizzbuzz
 
-print(add(1, 2))
-print(add(98, 0))
-print(add(100, -2))
+fizzbuzz()
+print("")
