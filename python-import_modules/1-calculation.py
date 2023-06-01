@@ -6,4 +6,4 @@ if __name__ == '__main__':
 print("{} + {} = {}".format(a, b , add(a, b)))
 print(f"{a} - {b} = {a - b}")
 print(f"{a} * {b} = {a * b}")
-print(f"{a} / {b} = {a / b}")
+print("{} / {} = {}".format(a, b, div(a, b)))
