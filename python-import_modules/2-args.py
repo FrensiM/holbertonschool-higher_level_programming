@@ -9,4 +9,4 @@ elif nr_arg == 1:
 else:
     print(f"{nr_arg} arguments:")
 for index, arg in enumerate(sys.argv[1:], start=1):
-    print(f"{index}: {sys.argv[index]}")    
+    print(f"{index}: {sys.argv[index]}")
