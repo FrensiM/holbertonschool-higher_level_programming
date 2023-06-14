@@ -64,13 +64,13 @@ class Rectangle:
             return string
         for i in range(self.__height):
             for j in range(self.__width):
-                string += '#'
+                string += str(self.print_symbol)
             if i + 1 != self.__height:
                 string += '\n'
         return string
 
     def __repr__(self):
-        return f'{self.print_symbol}'
+        return f'Rectangle({self.width}, {self.height})'
 
     def __del__(self):
         print("Bye rectangle...")
