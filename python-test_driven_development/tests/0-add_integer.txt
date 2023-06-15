@@ -1,0 +1,56 @@
+Module 0-add_integer
+
+def add_integer(a, b=98) defines addition of 2 integers
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Works with positive integers
+
+	>>> add_integer(4, 3)
+	7
+
+And negative integers too
+
+	>>> add_integer(-2, 4)
+	2
+	>>> add_integer(-3, -3)
+	-6
+
+If b is missing, the default value is 98
+
+	>>> add_integer(4)
+	102
+
+If one of the arguments is not an integer or a float
+
+	>>> add_integer(2, "Hello")
+	Traceback (most recent call last):
+	TypeError: b must be an integer
+
+	>>> add_integer("Hello", 2)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	TypeError: a must be an integer
+
+	>>> add_integer(hello)
+	Traceback (most recent call last):
+       	NameError: name 'hello' is not defined
+
+	>>> add_integer(float('inf'))
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('inf'), 7)
+	Traceback (most recent call last):
+	OverflowError: cannot convert float infinity to integer
+
+	>>> add_integer(float('nan'))
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
+
+	>>> add_integer(float('nan'), 10)
+	Traceback (most recent call last):
+	ValueError: cannot convert float NaN to integer
