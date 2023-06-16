@@ -1,37 +1,33 @@
-Module 5-text_indentation(text)
+Module 4-print_square
 
-def text_indentation(text) Prints the given text while being formated
+def print_square(size) prints a square with the character # where size is the length of the square
 
-	>>> text_indentation = __import__('5-text_indentation').text_indentation
+	>>> print_square = __import__('4-print_square').print_square
 
-Text must be string
+Function should print square with size "size"
 
-	>>> text_indentation(2)
+	>>> print_square(2)
+	##
+	##
+
+Size argument should be an int
+
+	>>> print_square('.!.')
 	Traceback (most recent call last):
-	TypeError: text must be a string
+	TypeError: size must be an integer
 
-Function should print formated text
+Size cannot be a float type or less than 0
 
-	>>> text_indentation("Ckemi Frensi. Me thua dot sa eshte ora? Ora eshte: 10")
-	Ckemi Frensi.
-	<BLANKLINE>
-	Me thua dot sa eshte ora?
-	<BLANKLINE>
-	Ora eshte:
-	<BLANKLINE>
-	10
-
-Even when there are lots of spaces
-
-	>>> text_indentation("Ckemi Frensi.    Me thua dot sa eshte ora?   11")
-	Ckemi Frensi.
-	<BLANKLINE>
-	Me thua dot sa eshte ora?
-	<BLANKLINE>
-	11
-
-If function is missing argument
-
-	>>> text_indentation()
+	>>> print_square(-1.5)
 	Traceback (most recent call last):
-	TypeError: text_indentation() missing 1 required positional argument: 'text'
+        TypeError: size must be an integer
+
+size cannot be lower than 0
+	>>> print_square(-2)
+	Traceback (most recent call last):
+        ValueError: size must be >= 0
+
+You need at least an argument
+	>>> print_square()
+	Traceback (most recent call last):
+	TypeError: print_square() missing 1 required positional argument: 'size'
