@@ -3,6 +3,7 @@
 
 
 def text_indentation(text):
+    """Print square module"""
     if type(text) is not str:
         raise TypeError("text must be a string")
     char = [".", "?", ":"]
