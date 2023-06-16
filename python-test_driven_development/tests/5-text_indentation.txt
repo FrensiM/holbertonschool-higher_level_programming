@@ -12,23 +12,23 @@ Text must be string
 
 Function should print formated text
 
-	>>> text_indentation("Ckemi Frensi Me thua dot sa eshte ora? Ora eshte: 10")
+	>>> text_indentation("Ckemi Frensi. Me thua dot sa eshte ora? Ora eshte: 9")
 	Ckemi Frensi.
 	<BLANKLINE>
 	Me thua dot sa eshte ora?
 	<BLANKLINE>
 	Ora eshte:
 	<BLANKLINE>
-	10
+	9
 
 Even when there are lots of spaces
 
-	>>> text_indentation("Ckemi Frensi.    Me thua dot sa eshte ora?   11")
+	>>> text_indentation("Ckemi Frensi.    Me thua dot sa eshte ora?   9")
 	Ckemi Frensi.
 	<BLANKLINE>
 	Me thua dot sa eshte ora?
 	<BLANKLINE>
-	11
+	9
 
 If function is missing argument
 
