@@ -3,6 +3,7 @@
 
 
 def read_file(filename=""):
+    '''readung file'''
     with open(filename, "r", encoding="utf-8") as f:
-        for line in f:
-            print(line, end='')
+        fr = f.read()
+        print(fr, end='')
