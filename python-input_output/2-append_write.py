@@ -5,5 +5,5 @@
 def append_write(filename="", text=""):
     '''apending at the end func'''
     with open(filename, 'w', encoding="utf-8") as f:
-        f.write(text)
-        return len(text)
+        fn = f.write(text)
+        return fn
