@@ -74,11 +74,13 @@ class Rectangle(Base):
             print("#" * self.width)
 
     def __str__(self):
+        '''str func'''
         txt = "[Rectangle] ({}) {}/{}".format(self.id, self.__x, self.__y)
         txt += " - {}/{}".format(self.__width, self.__height)
         return txt
 
     def update(self, *args, **kwargs):
+        ''' fun that update'''
         list_args = ["id", "width", "height", "x", "y"]
 
         if args and len(args) != 0:
