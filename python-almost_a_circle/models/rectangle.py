@@ -86,8 +86,7 @@ class Rectangle(Base):
         if args and len(args) != 0:
             for i in range(len(args)):
                 setattr(self, list_args[i], args[i])
-
         else:
             for key, value in kwargs.items():
-                if hasattr(key, value):
+                if hasattr(self, key):
                     setattr(self, key, value)
