@@ -23,3 +23,11 @@ class Base:
             return "[]"
         else:
             return json.dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        '''func'''
+        if json_string is None:
+            return []
+        else:
+            return json.loads(json_string)
