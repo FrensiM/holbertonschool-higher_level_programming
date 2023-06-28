@@ -10,6 +10,7 @@ class Square(Rectangle):
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
+        '''str function'''
         txt = "[Square] ({}) {}/{}".format(self.id, self.x, self.y)
         txt += " - {}".format(self.width)
         return txt
@@ -26,3 +27,15 @@ class Square(Rectangle):
             raise ValueError("width must be > 0")
         self.width = size
         self.height = size
+
+    def update(self, *args, **kwargs):
+        '''update function that check for args and kwargs'''
+        list_arg = ["id", "size", "x", "y"]
+
+        if args and len(args) != 0:
+            for i in range(len(args)):
+                setattr(self, list_arg[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
