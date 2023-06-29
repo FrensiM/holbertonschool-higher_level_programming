@@ -44,6 +44,7 @@ class Base:
 
     @classmethod
     def create(cls, **dictionary):
+        '''creat fic'''
         if cls.__name__ == "Rectangle":
             dummy_ins = cls(1, 2, 3, 4)
         else:
@@ -55,6 +56,7 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
+        '''file load'''
         my_list = []
         myfile = cls.__name__ + ".json"
         if not os.path.exists(myfile):
