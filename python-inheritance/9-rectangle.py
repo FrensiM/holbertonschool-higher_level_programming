@@ -21,3 +21,4 @@ class Rectangle(BaseGeometry):
         to_str = "[Rectangle] "
         to_str += str(self.__width) + '/' + str(self.__height)
         return to_str
+    
