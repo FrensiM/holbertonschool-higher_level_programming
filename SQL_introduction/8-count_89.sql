@@ -1,2 +1,2 @@
 -- display the number of records
-SELECT COUNT(id=89) FROM first_table;
+SELECT COUNT(id) FROM first_table WHERE id = 89;
