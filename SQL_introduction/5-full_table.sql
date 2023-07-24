@@ -1,2 +1,2 @@
 -- prints all description
-SELECT * FROM  first_table;
+SELECT CREATE FROM  first_table;
