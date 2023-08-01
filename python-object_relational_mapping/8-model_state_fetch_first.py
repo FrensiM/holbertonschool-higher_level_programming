@@ -17,6 +17,6 @@ if __name__ == "__main__":
     if state.count() == 0:
         print('Nothing')
     else:
-        state = state[0]
+        state = state.first()
         print("{}: {}".format(state.id, state.name))
     session.close()
