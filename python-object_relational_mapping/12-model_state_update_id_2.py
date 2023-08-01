@@ -13,7 +13,7 @@ if __name__ == "__main__":
                            .format(u, p, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    result = session.query(State).filter(State.id == 2).
-    update({'name': 'New Mexico'})
+    state = session.query(State).filter_by(id=2).first()
+    state.name = "New Mexico"
     session.commit()
     session.close()
