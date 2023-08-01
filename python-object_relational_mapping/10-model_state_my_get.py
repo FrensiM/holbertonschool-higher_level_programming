@@ -13,7 +13,7 @@ if __name__ == "__main__":
                            .format(u, p, db), pool_pre_ping=True)
     Base.metadata.create_all(engine)
     session = Session(engine)
-    state = session.query(State).filter_by(name = sys.argv[4]).first()
+    state = session.query(State).filter_by(name=sys.argv[4]).first()
     if state:
         print("{}".format(state.id))
     else:
